@@ -35,3 +35,41 @@ Using passenger information such as age, sex, class, fare, and family-related fi
 - Completed model evaluation and selected the best model for inference.
 - Delivered a working Streamlit app (`app.py`) that predicts survival probability from user inputs.
 - The project is reproducible and ready for local deployment, with cloud deployment support possible via Streamlit platforms.
+
+## How to Run
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd <your-repo-folder>
+   ```
+
+2. **Create and activate virtual environment**
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Train model and export artifacts**
+   ```bash
+   python train_model.py
+   ```
+   This generates:
+   - `artifacts/model.pkl`
+   - `artifacts/scaler.pkl`
+   - `artifacts/metadata.pkl`
+
+5. **Run Streamlit app**
+   ```bash
+   streamlit run app.py
+   ```
+
+6. **Use the app**
+   - Open the local URL shown in terminal (usually `http://localhost:8501`)
+   - Enter passenger details
+   - Click **Predict** to view survival prediction and probability
